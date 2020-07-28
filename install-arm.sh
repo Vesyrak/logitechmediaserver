@@ -52,9 +52,9 @@ usermod -a -G audio nobody
 # Install LMS
 OUT=$(curl -skL "http://downloads.slimdevices.com/nightly/index.php?ver=8.0")
 # Try to catch the link or die
-REGEX=".*href=\".(.*)amd64.deb\""
+REGEX=".*href=\".(.*)arm.deb\""
 if [[ ${OUT} =~ ${REGEX} ]]; then
-  URL="http://downloads.slimdevices.com/nightly${BASH_REMATCH[1]}amd64.deb"
+  URL="http://downloads.slimdevices.com/nightly${BASH_REMATCH[1]}arm.deb"
 else
   exit 1
 fi
