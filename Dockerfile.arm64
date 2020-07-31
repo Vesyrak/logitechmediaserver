@@ -1,4 +1,6 @@
 FROM phusion/baseimage:18.04-1.0.0-arm64
+COPY qemu-aarch64-static /usr/bin/
+
 MAINTAINER vesyrak
 
 #########################################
